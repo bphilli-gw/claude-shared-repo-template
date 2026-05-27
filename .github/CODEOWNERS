@@ -1,0 +1,11 @@
+# CODEOWNERS — auto-requests review when PRs are opened to the default branch.
+# Reference: https://docs.github.com/en/repositories/managing-your-repositories-settings-and-customizations/customizing-your-repository/about-code-owners
+#
+# Format: <path-pattern>    <reviewer1> <reviewer2>
+
+# Default owner — reviews any PR not matched by a more specific rule below.
+*    @OWNER-GITHUB-USERNAME
+
+# Optional: split ownership by folder for larger repos.
+# /src/      @OWNER-GITHUB-USERNAME @CONTRIBUTOR-GITHUB-USERNAME
+# /docs/     @OWNER-GITHUB-USERNAME
