@@ -28,9 +28,19 @@ Open a PR against the default branch with what changed, why, and how to verify. 
 
 ### Merging (owner only)
 
-**Squash and merge**, then **delete the branch.** Keeps the default branch clean and prevents stale-branch sprawl. If you're not the owner, tag the owner for review instead of self-merging.
+**Squash and merge**, then **delete the branch.** Branch protection on the default branch requires **linear history** (no merge commits), so one PR = one commit on the default branch and `git log` reads as a clean list of PRs. If you're not the owner, tag the owner for review instead of self-merging.
 
-Exception: a long-lived branch with several genuinely distinct logical changes can be merged non-squashed. Default is squash.
+One-time repo setup (owner): Settings → General → enable "Allow squash merging" and "Automatically delete head branches"; Settings → Branches → branch protection on the default branch → enable "Require linear history".
+
+### After your PR is merged
+
+Before starting your next task on this repo:
+
+- Switch to the default branch (`git checkout main`)
+- Pull the squashed commit (`git pull --rebase`)
+- Delete the merged local branch (`git branch -D <branch>`)
+
+Don't keep working on a branch that's already been merged — start a fresh branch from the updated default.
 
 ### Conflicts
 

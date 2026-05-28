@@ -62,10 +62,10 @@ Session committed and pushed.
 - Branch: <branch>
 - Commit: <hash> — <subject>
 - PR: <url> (status: open / draft)
-- Next: owner reviews and merges.
+- Next: owner reviews and squash-merges; your branch will be auto-deleted on merge.
 ```
 
-Do NOT run `gh pr merge`. That's the owner's decision after reviewing the diff. The owner is named in `.github/CODEOWNERS` and `CONTRIBUTING.md`.
+Do NOT run `gh pr merge`. That's the owner's decision after reviewing the diff. The owner is named in `.github/CODEOWNERS` and `CONTRIBUTING.md`. Merges use "Squash and merge"; GitHub auto-deletes the branch on merge.
 
 ## Guidelines
 
